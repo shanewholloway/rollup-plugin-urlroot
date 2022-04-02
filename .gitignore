@@ -3,3 +3,6 @@ esm/
 cjs/
 dist/
 umd/
+*.tgz
+*.tar.gz
+*.zip

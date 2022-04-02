@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-urlroot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "RollupJS plugin for absolute import resolving for absolute URL imports on the same host domain",
   "license": "MIT",
   "author": "Shane Holloway",
@@ -10,6 +10,9 @@
     "rollup-plugin",
     "url",
     "absolute"
+  ],
+  "files": [
+    "cjs"
   ],
   "main": "./cjs/urlroot.cjs",
   "module": "./urlroot.js",
