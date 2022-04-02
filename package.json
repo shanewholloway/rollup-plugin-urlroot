@@ -11,8 +11,8 @@
     "url",
     "absolute"
   ],
-  "type": "module",
-  "module": "rpi-urlroot.mjs",
+  "main": "./rpi-urlroot.cjs",
+  "module": "./rpi-urlroot.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shanewholoway/rollup-plugin-urlroot.git"
