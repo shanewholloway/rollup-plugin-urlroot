@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-urlroot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "RollupJS plugin for absolute import resolving for absolute URL imports on the same host domain",
   "license": "MIT",
   "author": "Shane Holloway",
@@ -11,13 +11,23 @@
     "url",
     "absolute"
   ],
-  "main": "./rpi-urlroot.cjs",
-  "module": "./rpi-urlroot.js",
+  "main": "./cjs/urlroot.cjs",
+  "module": "./urlroot.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shanewholoway/rollup-plugin-urlroot.git"
   },
   "dependencies": {},
-  "devDependencies": {},
-  "scripts": {}
+  "devDependencies": {
+    "rollup": "^2.70.1"
+  },
+  "scripts": {
+    "clean": "rm -rf cjs/ esm/",
+    "prebuild": "npm -s run clean",
+    "build": "rollup --config",
+    "watch": "npm -s run build -- --watch",
+    "prepublishOnly": "npm -s run test",
+    "pretest": "npm -s run build",
+    "test": "true"
+  }
 }

@@ -1,11 +1,3 @@
-# rollup-plugin-urlroot
-
-RollupJS plugin for absolute import resolving for absolute URL imports on the same host domain.
-
-## Use
-
-```javascript
-# in rollup.config.js
 import rpi_urlroot from 'rollup-plugin-urlroot'
 
 const plugins = [
@@ -13,13 +5,22 @@ const plugins = [
     ns: {
       site: '/',
       asset: '/app/assets/',
+
+      ns_dbg: (path, kw) => {
+        console.log('ns_dbg: %o', path, kw)
+        return '#=NS~DBG=#'+path },
     },
 
     at: {
       cdn_npm: 'https://cdn.jsdelivr.net/npm',
-      cdn_site: '/cdn',
+      cdn_site: '/cdn/npm',
+
+      at_dbg: (path, kw) => {
+        console.log('at_dbg: %o', path, kw)
+        return '#=AT~DBG=#'+path },
     },
   })]
+
 
 export default {
   input: [
@@ -32,8 +33,4 @@ export default {
   output: { dir: './out', format: 'es' },
   plugins,
 }
-```
 
-## License
-
-[MIT](LICENSE)
