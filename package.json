@@ -1,10 +1,10 @@
 {
   "name": "rollup-plugin-urlroot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "RollupJS plugin for absolute import resolving for absolute URL imports on the same host domain",
   "license": "MIT",
   "author": "Shane Holloway",
-  "homepage": "https://github.com/shanewholoway/rollup-plugin-urlroot#readme",
+  "homepage": "https://github.com/shanewholloway/rollup-plugin-urlroot#readme",
   "keywords": [
     "rollup",
     "rollup-plugin",
@@ -18,7 +18,7 @@
   "module": "./urlroot.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanewholoway/rollup-plugin-urlroot.git"
+    "url": "git+https://github.com/shanewholloway/rollup-plugin-urlroot.git"
   },
   "dependencies": {},
   "devDependencies": {
